@@ -8,6 +8,11 @@ MainWindow::MainWindow(QWidget *parent)
     s_answer = "";
     main = this;
     ui->setupUi(this);
+    for (int i = 1;i<=11;i++)
+    {
+        main->findChild<QCheckBox*>("checkBox_"+QString::number(i))->hide();
+        main->findChild<QRadioButton*>("radioButton_"+QString::number(i))->hide();
+    }
 }
 
 MainWindow::~MainWindow()
